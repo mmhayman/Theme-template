@@ -1,16 +1,7 @@
 <?php if (have_posts()): while (have_posts()): the_post();?>
 
-		<p><?php echo get_the_date(); ?></p>
 
 		<?php the_content();?>
-
-
-		<?php
-        $fname = get_the_author_meta('first_name');
-        $lname = get_the_author_meta('last_name');
-        ?>
-
-        <p>Posted by <?php echo $fname; ?> <?php echo $lname; ?></p>
 
 
     <?php $tags = get_the_tags();
@@ -24,7 +15,6 @@
     <?php endforeach;endif;?>
 
 
-
     <?php $categories = get_the_category();
     if($cat):
     foreach($categories as $cat):?>
@@ -34,6 +24,10 @@
         </a>
 
     <?php endforeach;endif;?>
+
+ 
+    <p><?php echo get_the_date(); ?></p>
+
 
     <?php //comments_template();?>
 
