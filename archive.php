@@ -1,33 +1,33 @@
 <?php get_header();?>
 
 <section class="page-wrap">
-<div class="container">
+    <div class="container">
 
         <section class="row">
 
-                <div class="col-lg-3">
+            <div class="col-lg-3">
 
 
-                <?php if( is_active_sidebar('blog-sidebar')):?>
+                <?php if (is_active_sidebar('blog-sidebar')): ?>
 
-                        <?php dynamic_sidebar('blog-sidebar');?>
+                <?php dynamic_sidebar('blog-sidebar');?>
 
                 <?php endif;?>
 
-                </div>
+            </div>
 
-                <div class="col-lg-9">
-        
-                        <h1><?php echo single_cat_title();?></h1>
+            <div class="col-lg-9">
 
-                        <?php get_template_part('includes/section', 'archive');?>
+                <h1><?php echo single_cat_title(); ?></h1>
 
-                        <?php previous_posts_link();?>
-                        <?php next_posts_link();?>
-                </div>
+                <?php get_template_part('includes/section', 'archive');?>
+
+                <?php previous_posts_link();?>
+                <?php next_posts_link();?>
+            </div>
         </section>
 
-</div>
+    </div>
 </section>
 
 <?php get_footer();?>
