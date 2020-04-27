@@ -85,3 +85,12 @@ header .top-bar .sub-menu li .sub-menu {
     top:0;
     left:100%;
 }
+.inquiry_form .frm_style_formidable-style.with_frm_style .frm_submit button{
+    width:100%!important;
+    background:green!important;
+    color:white!important;
+    display:block!important;
+    border:0!important;
+    padding:1rem!important;
+}
+
