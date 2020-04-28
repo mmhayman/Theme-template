@@ -125,6 +125,13 @@ add_action('wp_ajax_inquiry', 'inquiry_form');
 add_action('wp_ajax_nopriv_inquiry', 'inquiry_form');
 function inquiry_form() {
 
+
+    if(!wp_verify_nonce($_POST['nonce'], 'ajax-nonce') ) 
+    {
+        wp_send_json_error('Nonce is incorrect', 401);
+        die();
+    }
+
     $formdata = [];
 
     wp_parse_str($_POST['inquiry'], $formdata);
